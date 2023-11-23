@@ -1,0 +1,59 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    padding: 50px 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif;
+}
+
+.container{
+    display: flex;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.col{
+    flex: 1;
+    padding: 0 10px;
+
+    container: my-layout / inline-size;
+}
+
+.card{
+    padding: 10px;
+    border-radius: 12px;
+    background-color: #eeecf1;
+    display: grid;
+    gap: 1em;
+}
+
+.card h2{
+    margin-bottom: .3em;
+}
+
+.card img{
+    border-radius: 4px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.card time{
+    align-self: end;
+    font-size: 14px;
+    color: #565656;
+}
+
+ /*@container my-layout (inline-size > 45em) {*/
+@container my-layout (min-width: 500px){
+    .card{
+        grid-template-columns: 1.5fr 2fr;
+    }
+
+    .card img{
+        grid-row: span 2;
+        height: 100%;
+    }
+}
